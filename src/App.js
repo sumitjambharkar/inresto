@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Home from './Componets/Home';
+import Login from './Componets/Login';
+import {Router,Routes,Route} from 'react-router-dom';
+import Dish from './Componets/Dish'
+
 
 function App() {
+  const [user, setuser] = useState(null)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Home/>
+    {/* <Router>
+      <Routes>
+        <Route path="/home">
+          <Home/>
+        </Route>
+
+        <Route path='/dish'>
+          <Login/>
+        </Route>
+
+        <Route path="/homese">
+          <Dish/>
+        </Route>
+
+      </Routes>
+    </Router> */}
+    </>
   );
 }
 
